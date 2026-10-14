@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kevin Monitoring System</title>
+
+<style>
+
+body{
+    margin:0;
+    background:#0d1117;
+    color:#00ff88;
+    font-family:Consolas, monospace;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:500px;
+    background:#161b22;
+    border:1px solid #00ff88;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 0 20px rgba(0,255,136,0.25);
+}
+
+.title{
+    color:#58a6ff;
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.line{
+    margin:8px 0;
+}
+
+button{
+    width:100%;
+    margin-top:25px;
+    background:#00ff88;
+    color:black;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    font-weight:bold;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#3cffaa;
+}
+
+#result{
+    margin-top:20px;
+    white-space:pre-line;
+    color:white;
+    line-height:1.6;
+}
+
+.footer{
+    margin-top:20px;
+    color:#999;
+    font-size:12px;
+    text-align:center;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="title">
+KEVIN MONITORING SYSTEM
+</div>
+
+<div class="line">> Initializing scan...</div>
+<div class="line">> Target: greek-goddess.local</div>
+<div class="line">> Status: ONLINE ✅</div>
+<div class="line">> Availability: 100%</div>
+<div class="line">> Smile Service: Running</div>
+<div class="line">> Positive Vibes Engine: Active</div>
+<div class="line">> Analysis ready.</div>
+
+<button onclick="runAnalysis()">
+✨ Run Analysis ✨
+</button>
+
+<div id="result"></div>
+
+<div class="footer">
+Monitoring Platform v2.0
+</div>
+
+</div>
+
+<script>
+
+const reports = [
+
+`SCAN COMPLETED ✅
+
+Host: greek-goddess.local
+
+Result:
+
+The system confirms that the world
+is significantly brighter when
+you are part of it.
+
+💖 Have a wonderful day, chiqui.`,
+
+`HEALTH CHECK REPORT ✅
+
+No incidents detected.
+
+Observations:
+✔ Positive energy
+✔ Kindness
+✔ Lovely smile potential
+
+Recommendation:
+
+Never forget how special you are.
+
+🌸`,
+
+`AUTOMATED ANALYSIS
+
+A person of exceptional quality
+has been detected.
+
+Impact:
+Improves people's days.
+
+Risk:
+None.
+
+💖 Continue being amazing.`,
+
+`PRIORITY ALERT
+
+An extraordinary person
+has been identified.
+
+Resolution:
+Keep smiling 😊
+
+Expected outcome:
+A better day.
+
+👑 Certified Greek Goddess.`,
+
+`SECRET REPORT 🔒
+
+After reviewing all available data,
+Kevin's monitoring system
+reached one conclusion:
+
+✨ You deserve more smiles.
+✨ More happy moments.
+✨ More reasons to enjoy your day.
+
+And maybe one more message
+from Kevin. 😊`
+];
+
+function runAnalysis(){
+
+const random =
+reports[Math.floor(Math.random()*reports.length)];
+
+document.getElementById("result").innerText = random;
+
+}
+
+</script>
+
+</body>
+</html>
